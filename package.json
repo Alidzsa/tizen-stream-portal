@@ -2,6 +2,7 @@
   "name": "tizen-stream-portal",
   "version": "1.0.0",
   "description": "Tizen TV 6.0 IPTV Streamer & Web Media Portal",
+  "main": "index.html",
   "packageType": "app",
   "appName": "Stream & Live TV Portal",
   "appPath": "index.html",
