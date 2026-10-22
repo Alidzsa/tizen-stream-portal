@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Stream &amp; Live TV Portal for Tizen TV</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="header">
+        <div class="title-group">
+            <div class="logo-badge">📺</div>
+            <div>
+                <h1>Stream &amp; Live TV Portal</h1>
+                <div class="subtitle">Tizen TV 6.0 | Free Broadcasts (iptv-org) &amp; Web Media Launcher</div>
+            </div>
+        </div>
+
+        <!-- Remote Color Shortcuts -->
+        <div class="color-shortcuts-bar">
+            <div class="color-pill"><span class="dot-btn dot-red"></span> [Red] Live IPTV</div>
+            <div class="color-pill"><span class="dot-btn dot-green"></span> [Green] Web Portals</div>
+            <div class="color-pill"><span class="dot-btn dot-yellow"></span> [Yellow] Categories</div>
+            <div class="color-pill"><span class="dot-btn dot-blue"></span> [Blue] Play/Pause</div>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs-bar">
+        <button id="tab-iptv" class="tab-btn selected focusable" tabindex="0">📡 Live IPTV Channels (iptv-org)</button>
+        <button id="tab-sites" class="tab-btn focusable" tabindex="0">🌐 Web Media &amp; Custom Streams</button>
+    </nav>
+
+    <!-- TAB 1: LIVE IPTV SECTION -->
+    <main id="iptv-section">
+        <!-- Category Filter Ribbon -->
+        <div class="categories-ribbon">
+            <button class="cat-btn selected focusable" data-cat="movies" tabindex="0">🎬 Movies &amp; Cinema</button>
+            <button class="cat-btn focusable" data-cat="news" tabindex="0">📰 News Channels</button>
+            <button class="cat-btn focusable" data-cat="sports" tabindex="0">⚽ Sports</button>
+            <button class="cat-btn focusable" data-cat="music" tabindex="0">🎵 Music &amp; Concerts</button>
+            <button class="cat-btn focusable" data-cat="animation" tabindex="0">🍿 Animation &amp; Kids</button>
+            <button class="cat-btn focusable" data-cat="documentary" tabindex="0">🦁 Documentaries</button>
+        </div>
+
+        <!-- Channels Grid -->
+        <div id="channels-grid" class="channels-grid"></div>
+    </main>
+
+    <!-- TAB 2: WEB MEDIA & CUSTOM STREAMS SECTION -->
+    <main id="sites-section" style="display: none; flex-direction: column; gap: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="color: #94a3b8; font-size: 15px;">Launch favorite TV web platforms or add custom m3u8 stream links:</p>
+            <button id="add-site-btn" class="focusable" tabindex="0">+ Add Custom Stream / URL</button>
+        </div>
+
+        <div id="sites-grid" class="sites-grid"></div>
+    </main>
+
+    <!-- FULLSCREEN VIDEO PLAYER OVERLAY -->
+    <div id="player-overlay">
+        <video id="main-video" playsinline></video>
+
+        <!-- Player On-Screen Controls HUD -->
+        <div id="player-hud" class="player-hud">
+            <div class="player-meta">
+                <h2 id="player-title">Live Channel</h2>
+                <p id="player-status">Streaming Live HLS</p>
+            </div>
+            <div class="player-controls-row">
+                <button id="play-pause-btn" class="focusable" tabindex="0">Pause</button>
+                <button id="aspect-btn" class="focusable" tabindex="0">Fit: Contain</button>
+                <button id="close-player-btn" class="focusable" tabindex="0">Exit Player (Back)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Footer Bar -->
+    <footer class="footer-bar">
+        <div>
+            <span class="remote-hint-badge">Arrow Keys</span> Navigate
+            <span class="remote-hint-badge" style="margin-left: 8px;">Enter</span> Select / Watch
+            <span class="remote-hint-badge" style="margin-left: 8px;">Back</span> Return / Close Player
+        </div>
+        <div>
+            Powered by <b>iptv-org</b> &amp; Hls.js
+        </div>
+    </footer>
+
+    <!-- Bundled HLS Engine & Application Script -->
+    <script src="hls.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
