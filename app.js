@@ -50,11 +50,12 @@
 
     // Preloaded Streaming Web Portals & Media Services
     var defaultWebSites = [
-        { name: "Pluto TV Web Portal", desc: "100+ Free Live Channels & On-Demand Shows", url: "https://pluto.tv", tag: "TV & Movies" },
+        { name: "Ramoflix", desc: "Movies & Shows Streaming Portal", url: "https://ramoflix.net/", tag: "Movies & Shows" },
+        { name: "Doraby", desc: "Drama & Cinema Portal", url: "https://doraby.com/", tag: "Movies & Shows" },
+        { name: "WMovies", desc: "Streaming Portal & Shows", url: "https://wmovies.org/home/", tag: "Movies & Shows" },
+        { name: "Pluto TV Web Portal", desc: "100+ Free Live Channels & On-Demand Shows", url: "https://pluto.tv", tag: "Live TV & Shows" },
         { name: "Plex Free Live & Shows", desc: "Free Movies, Documentaries & Web TV", url: "https://watch.plex.tv", tag: "Movies & Shows" },
-        { name: "Internet Archive Feature Films", desc: "Thousands of Public Domain Classics & Vintage Cinema", url: "https://archive.org/details/feature_films", tag: "Cinema Archive" },
-        { name: "NASA Live Science Portal", desc: "Live Space Exploration, ISS Cameras & Feeds", url: "https://www.nasa.gov/live/", tag: "Science & Space" },
-        { name: "Red Bull TV Live", desc: "Live Action Sports, Documentaries & Racing", url: "https://www.redbull.com/us-en/live-events", tag: "Action Sports" }
+        { name: "Internet Archive Feature Films", desc: "Thousands of Public Domain Classics & Vintage Cinema", url: "https://archive.org/details/feature_films", tag: "Cinema Archive" }
     ];
 
     // DOM Elements
